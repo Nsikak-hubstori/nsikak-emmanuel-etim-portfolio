@@ -3,6 +3,11 @@ import { useEffect } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
+export "use client"
+import { useEffect } from "react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
 export default function Home(){
   useEffect(()=>{
     gsap.registerPlugin(ScrollTrigger)
@@ -23,11 +28,12 @@ export default function Home(){
         <p className="mt-6 max-w-2xl">I am <b>Nsikak Emmanuel Etim</b> from Nigeria. A full stack developer who has built many websites, apps and more to clients and also a serious person. I deliver real results.</p>
         <div className="mt-8 flex gap-3"><a href="https://wa.me/2348025238990" target="_blank" className="bg-green-600 text-white px-6 py-3 rounded-full text-sm font-bold">WhatsApp: 08025238990</a><a href="mailto:purestories0@gmail.com" className="border px-6 py-3 rounded-full text-sm font-bold">purestories0@gmail.com</a></div>
 
-        <div className="mt-12 border-t pt-8 grid md:grid-cols-4 gap-6 text-[11px]">
+        <div className="mt-12 border-t pt-8 grid md:grid-cols-5 gap-6 text-[11px]">
           <div className="border-l-2 border-black pl-3"><b>baskhealth-clone.vercel.app/admin</b><br/>Next.js + Supabase — Doctor Dashboard</div>
           <div className="border-l-2 border-black pl-3"><b>baskhealth-clone-hyb9.vercel.app</b><br/>Next.js — Sample Work</div>
           <div className="border-l-2 border-zinc-300 pl-3"><b>hubstori.name.ng</b><br/>WordPress — Media Platform</div>
           <div className="border-l-2 border-zinc-300 pl-3"><b>hubstori.blogspot.com</b><br/>Blogger — Movie Blog</div>
+          <div className="border-l-2 border-violet-600 pl-3"><b>nova-mini-crm.vercel.app</b><br/>Next.js + Groq AI — AI CRM for Lawyers</div>
         </div>
       </section>
 
@@ -62,7 +68,7 @@ export default function Home(){
         <div className="md:w-[45%] p-8 md:p-12 flex flex-col justify-center">
           <div className="reveal text-[10px] tracking-[0.2em]">03 / EXPLAINED - WORDPRESS - HUBSTORI.NAME.NG</div>
           <h2 className="reveal text-4xl font-black mt-3">Hubstori.name.ng</h2>
-          <p className="reveal mt-4 text-sm">This site is built with <b>WordPress</b> on custom domain.name.ng. It's an entertainment media platform with 2M+ views. I post music, movies, Taylor Swift, Davido, news.</p>
+          <p className="reveal mt-4 text-sm">This site is built with <b>WordPress</b> on custom domain.name.ng. It&apos;s an entertainment media platform with 2M+ views. I post music, movies, Taylor Swift, Davido, news.</p>
           <div className="reveal mt-4 text-[12px]"><b>Skills:</b> WordPress Install, Custom Theme, Plugins, Elementor, Custom Domain DNS + SSL, Yoast SEO, Google Search Console, Google Indexing, Sitemap, Google Analytics 4, AdSense Monetization, YouTube Embed, Viral Content Strategy, Social Media Growth (TikTok, Facebook, WhatsApp Channel), Content Writing</div>
           <a href="https://hubstori.name.ng" target="_blank" className="reveal mt-6 border-2 border-black px-7 py-3 rounded-full w-fit font-bold text-sm">→ Visit WordPress Site</a>
         </div>
@@ -77,6 +83,22 @@ export default function Home(){
           <p className="reveal mt-4 text-sm">Built with <b>Blogger (Google)</b> - storytelling, movie summaries, viral curation. Second blog for SEO dominance.</p>
           <div className="reveal mt-4 text-[12px]"><b>Skills:</b> Blogger CMS, Template Customization, Storytelling, Long-form Writing, SEO, Google Indexing, AdSense, Image Optimization</div>
           <a href="https://hubstori.blogspot.com" target="_blank" className="reveal mt-6 bg-black text-white px-7 py-3 rounded-full w-fit font-bold text-sm">→ Visit Blogspot</a>
+        </div>
+      </section>
+
+      {/* SITE 5 EXPLAINED - NOVA MINI CRM FOR LAWYERS */}
+      <section className="skill-section min-h-[110vh] flex flex-col md:flex-row bg-[#0f172a] text-white border-t">
+        <div className="md:w-[55%] h-[60vh] md:h-[110vh] overflow-hidden relative"><img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1200" className="skill-img absolute w-full h-[135%] object-cover top-[-15%]" alt="people celebrating after using Nova" /></div>
+        <div className="md:w-[45%] p-8 md:p-12 flex flex-col justify-center bg-[#1a1a2e]">
+          <div className="reveal text-[10px] tracking-[0.2em] text-violet-300">05 / EXPLAINED - AI CRM - NOVA MINI CRM</div>
+          <h2 className="reveal text-4xl font-black mt-3">Nova Mini CRM — For Lawyers</h2>
+          <p className="reveal mt-4 text-sm text-zinc-300">This is my AI-powered CRM I built for lawyers. I rebuilt NOVACRM (novacrm.ai) – the AI Real Estate Operating System – for Lawyers. Like Real Nova does for Real Estate Agents, my Nova does for Law Firms.</p>
+          <p className="reveal mt-3 text-sm text-zinc-300">Nova is a private dashboard for lawyers only – clients don&apos;t see it. Lawyers manage leads, and Dee – the AI assistant – does the work. Lawyers smile more, clients feel cared for, cases close faster.</p>
+          <div className="reveal mt-4 text-[12px] text-zinc-300"><b>What It Does:</b><br/>• Dee AI Caller – Call scripts, qualification, appointments<br/>• Dee AI Lead Nurture – Auto SMS + Email follow-ups for stalled leads<br/>• Dee AI Marketing – Generates posts & content for law firms<br/>• Dee Chatbot + Scoring – Scores leads 1-100, calculates 15% fee instantly<br/>• Visual Pipeline: New → Stalled → Won + Real-time Insights<br/>• 30 Days Free Trial – No Card Required, then $79/month Pro</div>
+          <div className="reveal mt-4 text-[12px]"><b>Built With:</b> Next.js 14, TypeScript, Tailwind CSS, GSAP + ScrollTrigger, Vercel Deploy</div>
+          <div className="reveal mt-3 text-[12px] text-violet-300"><b>AI Assistance:</b> I also added AI Assistance with intelligence powered by Groq API (Llama 3.1). Dee is fed with everything about Nova, so she knows what Nova is made for, answers questions about Nova, collects Name / Email / Case Amount, calculates fee, scores leads, and writes SMS / Email / Call scripts.</div>
+          <a href="https://nova-mini-crm.vercel.app" target="_blank" className="reveal mt-6 bg-violet-600 text-white px-7 py-3 rounded-full w-fit font-bold text-sm">→ Open Nova Mini CRM – Live Demo</a>
+          <p className="reveal mt-3 text-[11px] text-zinc-400">✅ 30 Days Free Trial • No Card Required • Try Dee Chat – Ask “What is Nova?”</p>
         </div>
       </section>
 
@@ -103,9 +125,10 @@ export default function Home(){
           <a href="https://baskhealth-clone-hyb9.vercel.app" className="border px-4 py-2 rounded-full">Sample Work</a>
           <a href="https://hubstori.name.ng" className="border px-4 py-2 rounded-full">hubstori.name.ng (WordPress)</a>
           <a href="https://hubstori.blogspot.com" className="border px-4 py-2 rounded-full">hubstori.blogspot.com (Blogger)</a>
+          <a href="https://nova-mini-crm.vercel.app" className="border px-4 py-2 rounded-full">Nova Mini CRM – For Lawyers</a>
         </div>
         <div className="mt-8 text-[10px] text-zinc-400">© 2026 NSIKAK E. ETIM - BUILT WITH NEXT.JS + GSAP</div>
       </section>
     </main>
   )
-                                   }
+  }
